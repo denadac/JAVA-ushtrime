@@ -1,6 +1,8 @@
 package Ushtrimi4;
 
-public class BankAccount {
+import java.util.ArrayList;
+
+public class BankAccount implements Measurable{
     private int accountNo;
     private double amount;
     public BankAccount(){
@@ -22,5 +24,15 @@ public class BankAccount {
     }
     public void setAmount(double am){
         this.amount = am;
+    }
+    public double getMeasure(){
+        ArrayList<BankAccount> accList = new ArrayList<BankAccount>();
+        double sum = 0;
+        for (int i= 0; i< accList.size(); i++){
+            sum += accList.get(i).getAmount();
+
+        }
+        return sum / accList.size();
+
     }
 }
