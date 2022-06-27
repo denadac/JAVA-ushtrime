@@ -15,7 +15,7 @@ public class Main {
         Dog myDog2 = new Dog("DR", "White", false);  //Therritja e konstruktorit te parametrizuar
         Cat myCat1 = new Cat("Rosi", "Orange", false);
         myDog2.displayAnimal();
-        Cat myCat2 = new Cat(); //konstruktori default
+        Cat myCat2 = new Cat(); //konstruktori default i klases Cat
         myCat2.displayAnimal();
         ArrayList<Cat> lista1 = new ArrayList<Cat>();
         lista1.add(myCat1);
@@ -47,6 +47,21 @@ public class Main {
             curr.displayAnimal();
         }
 
+        //testing the equals() override
+        ZooKepeer zoo1 = new ZooKepeer("Anna", "Rossi", 35);
+        ZooKepeer zoo2 = new ZooKepeer("Anna", "Rossi", 35);
+        ZooKepeer zoo3 = new ZooKepeer("Maria", "Rossi", 37);
+
+        if (zoo1.equals(zoo2)) {
+            System.out.println("Equal ");
+        } else {
+            System.out.println("Not Equal ");
+        }
+        if (zoo3.equals(zoo2)) {
+            System.out.println("Equal ");
+        } else {
+            System.out.println("Not Equal ");
+        }
 
 
 

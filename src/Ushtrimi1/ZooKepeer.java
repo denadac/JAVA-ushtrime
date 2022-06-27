@@ -1,4 +1,6 @@
 package Ushtrimi1;
+import java.util.Objects;
+
 //Krijo nje klase ZooKepeer qe permbaje variablat e instances si name, surname, age. Krijo metodat get/set.
 //Cila eshte superclass e klases ZooKepeer? Bej override metodat
 //toString() dhe equals() te klases Object.
@@ -38,6 +40,13 @@ public class ZooKepeer extends Zoo {
     @Override
     public String toString() {  //overriding toString() method
         return "Name: " + String.valueOf(this.name) + " Surname: " + String.valueOf(this.surname) + " Age: " +String.valueOf(this.age);
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ZooKepeer zoo = (ZooKepeer) o;
+        return age == zoo.age && Objects.equals(name, zoo.name);
     }
 
 

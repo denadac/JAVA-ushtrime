@@ -21,7 +21,7 @@ public abstract class Employee {
         return id;
     }
 
-    //Seters
+    //Setters
     public void setName(String n){
         this.name = n;
     }
@@ -31,4 +31,13 @@ public abstract class Employee {
     public void setId(int i){
         this.id = i;
     }
+    @Override
+    public String toString()
+ {
+        return String.format( "First Name: %s\nLast Name: %s\nEmployee ID: %s",getName(), getSurname(), getId() );
+        }
+
+        //abstract method
+        public abstract double totalSalary();
+
 }
