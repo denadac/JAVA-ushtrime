@@ -1,4 +1,6 @@
 package Ushtrimi1;
+import Ushtrimi2.Employee;
+
 import java.util.ArrayList;
 
 
